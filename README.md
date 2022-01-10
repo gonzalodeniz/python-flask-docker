@@ -11,9 +11,10 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 Mira **Deployment** para conocer como desplegar el proyecto.
 
 
-### Pre-requisitos 📋
+### Entorno desarrollo 📋
 
 Python3 y flask
+
 ```
 yum install -y python3
 pip3 install virtualenv
@@ -23,17 +24,32 @@ source ./activate
 pip install flask
 ```
 
-### Instalación 🔧
+Creación del fichero requirements.txt
 
-
+```
+pip freeze > requirements.txt
+```
 
 ## Despliegue 📦
 
-_Agrega notas adicionales sobre como hacer deploy_
+Build image
+
+```
+docker build -t flaskapp .
+```
+
+Run container docker
+
+```
+docker run -it -p 4000:4000 -d flaskapp
+```
+
 
 ## Construido con 🛠️
 
 * Python3
+* Flask
+* Docker
 
 
 

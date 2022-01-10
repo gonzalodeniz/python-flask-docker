@@ -1,1 +1,6 @@
+# Directorios
 venv
+__pycache__
+
+# Ficheros
+*.pyc
